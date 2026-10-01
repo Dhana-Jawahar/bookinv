@@ -1,9 +1,9 @@
 [project]
-name = "fact"
+name = "bookinvapi"
 version = "1.0.0"
 description = "Example Python project using best practices"
 authors = [
-    { name = "John Hagen", email = "johnthagen@users.noreply.github.com" }]
+    { name = "", email = "" }]
 license = "MIT"
 license-files = ["LICENSE*"]
 readme = "README.md"
@@ -26,7 +26,13 @@ classifiers = [
 ]
 requires-python = ">=3.10"
 dependencies = [
+    "bcrypt>=5.0.0",
+    "fastapi[standard]>=0.141.1",
+    "httpx>=0.28.1",
+    "httpx2>=2.13.1",
+    "psycopg2-binary==2.9.13",
     "rich",
+    "sqlalchemy>=2.0.54",
     "typer",
 ]
 
@@ -35,8 +41,8 @@ Homepage = "https://github.com/johnthagen/python-blueprint"
 Documentation = "https://johnthagen.github.io/python-blueprint/"
 Repository = "https://github.com/johnthagen/python-blueprint"
 
-[project.scripts]
-fact = "fact.cli:app"
+# [project.scripts]
+book = "bookInvapi.main:app"
 
 [dependency-groups]
 nox = [
